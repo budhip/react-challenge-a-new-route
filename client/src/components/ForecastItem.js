@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class ForecastItem extends Component {
   constructor(props) {
@@ -21,13 +22,18 @@ class ForecastItem extends Component {
     return(
         <div className="col-sm-4 col-md-4">
           <div className="card border-success mb-3" style={{width: '20rem'}}>
-            <div className="card-header bg-warning border-success">{this.state.tanggalan}</div>
-              <div className="card-body text-success">
-                <p className="card-text">Kelembaban : {this.props.kelembaban} %</p>
-                <p className="card-text">Temperatur : {this.state.derajatCelcius} ℃</p>
-                <p className="card-text">Awan: <img src={displayIcon} alt="" />{this.props.cuaca}</p>
-              </div>
-            <div className="card-footer border-success">Sumber: OpenWeatherMap</div>
+            <div className="card-header bg-warning border-success"><img src={displayIcon} alt="" />{this.state.tanggalan}</div>
+            <Link to={{
+              pathname: `/weather/${this.props.tanggalDT}`,
+              state: { kelembaban: this.props.kelembaban,
+                       cuaca: this.props.cuaca,
+                       tanggal: this.props.tanggal,
+                       suhu: this.props.suhu,
+                       icon: this.props.icon
+                     }
+            }}>
+            <div className="card-footer border-success">Detail</div>
+            </Link>
           </div>
         </div>
     );

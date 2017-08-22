@@ -42,6 +42,9 @@ class MainForecast extends Component{
             tanggal = {
               weather.dt_txt
             }
+            tanggalDT = {
+              weather.dt
+            }
             kelembaban = {
               weather.main.humidity
             }

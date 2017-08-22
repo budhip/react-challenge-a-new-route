@@ -11,10 +11,7 @@ class Header extends Component {
           <navbar-brand>
             <img src={Logo} width="40px" alt="" />
           </navbar-brand>
-          <a className="navbar-brand" href="#">WeatherCute</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          <span className="navbar-brand">WeatherCute</span>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
