@@ -21,13 +21,13 @@ class ForecastItem extends Component {
     return(
         <div className="col-sm-4 col-md-4">
           <div className="card border-success mb-3" style={{width: '20rem'}}>
-            <div className="card-header bg-transparent border-success">{this.state.tanggalan}</div>
+            <div className="card-header bg-warning border-success">{this.state.tanggalan}</div>
               <div className="card-body text-success">
                 <p className="card-text">Kelembaban : {this.props.kelembaban} %</p>
                 <p className="card-text">Temperatur : {this.state.derajatCelcius} ℃</p>
                 <p className="card-text">Awan: <img src={displayIcon} alt="" />{this.props.cuaca}</p>
               </div>
-            <div className="card-footer bg-transparent border-success">Sumber: OpenWeatherMap</div>
+            <div className="card-footer border-success">Sumber: OpenWeatherMap</div>
           </div>
         </div>
     );

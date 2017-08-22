@@ -40,13 +40,13 @@ class ContentCuaca extends Component {
         <Header />
         <h1 className=""> Cuaca hari ini </h1>
         <div className="card border-success mb-3" style={{width: '20rem'}}>
-          <div className="card-header bg-transparent border-success">{this.state.kota}</div>
+          <div className="card-header bg-warning border-success">{this.state.kota}</div>
           <div className="card-body text-success">
             <p className="card-text">Kelembaban : {this.state.kelembaban} %</p>
             <p className="card-text">Temperatur : {this.state.suhu} ℃</p>
             <p className="card-text">Awan: <img src={displayIcon} alt="" />{this.state.cuaca}</p>
           </div>
-          <div className="card-footer bg-transparent border-success">Sumber: OpenWeatherMap</div>
+          <div className="card-footer border-success">Sumber: OpenWeatherMap</div>
         </div>
         <hr />
         <MainForecast />
