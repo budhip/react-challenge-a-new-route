@@ -29,7 +29,7 @@ class MainForecast extends Component{
   render = () => {
     return(
       <div>
-        <h1>Perkiraan cuaca</h1>
+        <h1>Perkiraan cuaca 5 hari kedepan</h1>
         <div className="row">
           {this.state.weatherList.map((weather, index) => (
             (weather.dt_txt.includes("06:00:00")) ? <ForecastItem

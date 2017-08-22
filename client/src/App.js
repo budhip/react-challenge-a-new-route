@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './components/Home';
 import ContentCuaca from './components/ContentCuaca';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <div className="container ">
-          <div className="text-center">
-            <label className="label">Nama Kota</label>
-            <p className="control">
-              <input className="input" type="text" placeholder="--Nama Kota--" />
-            </p>
-          </div>
+      <BrowserRouter>
+        <div>
+          <Route exact path='/' component={Home} />
+          <Route path='/PerkiraanCuaca' component={ContentCuaca} />
         </div>
-        <hr />
-        <ContentCuaca />
-      </div>
+      </BrowserRouter>
     );
   }
 }

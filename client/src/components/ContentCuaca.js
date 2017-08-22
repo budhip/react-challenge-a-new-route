@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MainForecast from './MainForecast';
+import Header from './Header';
 
 class ContentCuaca extends Component {
   constructor() {
@@ -36,6 +37,7 @@ class ContentCuaca extends Component {
     let displayIcon = 'http://openweathermap.org/img/w/' +this.state.icon+ '.png';
     return(
       <div>
+        <Header />
         <h1 className=""> Cuaca hari ini </h1>
         <div className="card border-success mb-3" style={{width: '20rem'}}>
           <div className="card-header bg-transparent border-success">{this.state.kota}</div>
